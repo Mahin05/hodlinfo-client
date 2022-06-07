@@ -1,0 +1,14 @@
+/* style={{'width':'40%','background-color':'#3dc6c1'}} */
+body {
+    background-color: #191d28;
+}
+.btn-style{
+    width: 40%;
+    background-color: #3dc6c1;
+    border: none;
+    border-radius: 10px;
+}
+li{
+    color: black;
+    padding-left: 10%;
+}

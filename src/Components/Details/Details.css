@@ -1,0 +1,19 @@
+thead {
+    background-color: #191d28;
+    color: white;
+}
+
+table {
+    width: 80%;
+}
+
+tr {
+    text-align: center;
+
+}
+
+td {
+    border: none;
+    color: white;
+    text-align: center;
+}
