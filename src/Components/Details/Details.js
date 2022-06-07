@@ -4,7 +4,7 @@ import './Details.css'
 const Details = () => {
     const [datas, setData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/datas')
+        fetch('https://infinite-plateau-42022.herokuapp.com/datas')
             .then(res => res.json())
             .then(data => setData(data))
     }, []);

@@ -3,22 +3,6 @@ import logo from '../../assets/Capture.PNG'
 import './Navbar.css'
 
 const Navbar = () => {
-    const [datas, setData] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:5000/datas')
-            .then(res => res.json())
-            .then(data => setData(data))
-    }, [])
-    const [filter, setFilter] = useState('');
-    const searchText = (event) => {
-        setFilter(event.target.value);
-    }
-    // console.warn(filter)
-    let dataSearch = datas.filter(item => {
-        return Object.keys(item).some(key =>
-            item[key].toString().toLowerCase().includes(filter.toString().toLowerCase())
-        )
-    })
     return (
         <div style={{ 'width': '90%' }} class="navbar py-12 px-12">
             <div class="navbar-start">
@@ -66,8 +50,7 @@ const Navbar = () => {
                             BTC
                             <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                         </a>
-                        <ul value={filter}
-                            onChange={searchText.bind(this)} style={{ 'position': 'absolute', 'width': '150%' }} class="p-2 bg-white">
+                        <ul style={{ 'position': 'absolute', 'width': '150%' }} class="p-2 bg-white">
                             <li><a>BTC</a></li>
                             <li><a>ETH</a></li>
                             <li><a>USDT</a></li>
