@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Loading from '../Loading/Loading';
 import './Details.css'
 
 const Details = () => {
@@ -10,6 +11,9 @@ const Details = () => {
     }, []);
     return (
         <div className="px-10">
+            {
+                datas.length === 0 ? <Loading></Loading> : ''
+            }
             {/* <h2 className="text-2xl">My Orders:{orders.length}</h2> */}
             <div class="overflow-x-auto">
                 <table class="table w-full">
